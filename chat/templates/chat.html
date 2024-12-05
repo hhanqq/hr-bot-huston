@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат Бот</title>
+</head>
+<body>
+    <h1>Чат Бот</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="question">Введите ваш вопрос:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Отправить</button>
+    </form>
+    {% if response %}
+        <h2>Ответ:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
