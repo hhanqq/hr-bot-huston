@@ -1,0 +1,1039 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+ 
+  
+}
+
+:root {
+    --moonstone: #3bbcd4ff;
+    --yinmn_blue: #3354a1ff;
+    --ultra_violet: #654595ff;
+    --slate_gray: #6c8899ff;
+    --yellow_green: #9ac627ff;
+    --egyptian_blue: #3b388dff;
+    --white: #fff;
+    --black: #000;
+    --eminence: #652580ff;
+    --yellow_green_light: #9fc53aff;
+    --vivid_sky_blue: #36cce8ff;
+    --gray: #DADADA;
+    --light_gray: #F5F5F5;
+    --dark_gray: #757575;
+    --black_gray: #545454;
+}
+
+body {
+    color: var(--black);
+    background-color: var(--white);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    width: 100%;
+    margin: 0 auto;
+    cursor: default;
+}
+
+h2 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+section {
+    width: 100%;
+    min-height: 500px;
+}
+
+
+/* Бвзовая менюшка */
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 0px 100px 0px;
+}
+
+
+.menu_inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-weight: 500;
+    position: relative;
+    padding: 10px 40px 0px 40px;
+    background-color: var(--white);
+    position: fixed;
+    border-bottom: 5px solid var(--vivid_sky_blue);
+}
+
+.menu_inner li:nth-child(2){
+    margin-top: auto;
+}
+
+
+/* Меню ошибки */
+
+.menu_error {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-weight: 500;
+    position: relative;
+    padding: 10px 40px 0px 40px;
+    background-color: var(--white);
+    position: fixed;
+    border-bottom: 5px solid var(--light_gray);
+}
+
+.menu_error li:nth-child(2){
+    margin-top: auto;
+}
+
+/* Настройка logo */
+
+.logo{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+}
+
+
+/* Настройка кнопок навигации по странице */
+
+.nav {
+    display: flex;
+    list-style: none;
+    margin: 0px 0px 0px 35px;;
+    padding: 0;
+}
+
+.nav li{
+    padding-left: 25px;
+    margin: 0px 20px 0px 20px;;
+}
+
+.nav li a{
+    color: var(--black);
+    text-decoration: underline;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.nav li a:hover{
+    color: var(--white);
+    background-color: var(--egyptian_blue);
+}
+
+
+/* Настройка кнопок регистрации/входа */
+
+.auth_btn {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.auth_btn li{
+    padding-left: 25px;
+}
+
+.auth_btn li a{
+    color: var(--black);
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.auth_btn li a:hover{
+    color: var(--black);
+    background-color: var(--vivid_sky_blue);
+}
+
+.login {
+    background-color: var(--yellow_green);
+    padding: 10px 60px 15px 60px;
+}
+
+.register {
+    background-color: var(--eminence);
+    padding: 10px 20px 15px 20px;
+}
+
+
+/*Главный переход на демо-версию бота*/ 
+
+.main_content{
+    max-width: 80%;
+    margin: 150px auto 0;
+    min-width: 1300px;
+    height: 700px;
+    background-image: url(../image/astro.png);
+    background-size: 55% 90%;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.main_content h1{
+    font-size: 85px;
+    font-weight: 600;
+    width: 800px;
+    margin: 0 0 50px 0;
+    text-align: left;
+}
+
+
+/*Основа ошибки 1*/ 
+
+.main_error{
+    max-width: 80%;
+    margin: 0 auto 0;
+    min-width: 1300px;
+    height: 700px;
+    background-image: url(../image/rocket.png);
+    background-size: 46% 90%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.main_error h1{
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 55%;
+    margin: 0 auto 20px;
+    padding: 600px 0 0 0;
+}
+
+.main_error p{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    max-width: 48%;
+    margin: 0 auto 6px;
+}
+
+
+/*Основа ошибки 2*/ 
+
+.main_mistake{
+    max-width: 80%;
+    margin: 0 auto 0;
+    min-width: 1300px;
+    height: 700px;
+    background-image: url(../image/rocket.png);
+    background-size: 46% 90%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.main_mistake h1{
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 55%;
+    margin: 0 auto 20px;
+    padding: 600px 0 0 0;
+}
+
+.main_mistake p{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 48%;
+    margin: 0 auto 6px;
+}
+
+
+/* Настройка кнопки демо-версии */
+
+.demo_btn {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 0 0 0 0;
+    text-align: center;
+    font-size: 45px;
+}
+
+.demo_btn a{
+    color: var(--eminence);
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--gray);
+    padding: 25px 20px 30px 20px;
+    margin: 100px 0 0 0;
+}
+
+.demo_btn a:hover{
+    color: var(--light_gray);
+    background-color: var(--egyptian_blue);
+}
+
+
+/* Настройка кнопки главную */
+
+.home_btn {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    font-weight: 500;
+    padding: 0 0 0 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.home_btn li{
+    margin: 40px auto;
+}
+
+.home_btn li a{
+    color: var(--black);
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--vivid_sky_blue);
+    padding: 15px 50px 15px 50px;
+}
+
+.home_btn li a:hover{
+    color: var(--light_gray);
+    background-color: var(--yinmn_blue);
+}
+
+
+/*Кружки с показателями*/ 
+
+.indicators{
+    font-size: 35px;  
+    margin: 50px auto 160px;
+    width: 80%;
+}
+
+.indicators div{
+    border-radius: 50%;
+    min-width: 220px;
+    min-height: 220px;
+    padding: 48px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    
+}
+
+.right {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    height: 200px;
+    margin-left: 300px;
+    margin-bottom: 26px;
+}
+
+.right p{
+    width: 800px;
+    font-size: 26px;
+}
+
+.indicators li:nth-child(1) p{
+    padding-left: 380px;
+    padding-top: 60px;
+    height: 200px;
+}
+
+.indicators li:nth-child(3) p{
+    padding-left: 240px;
+    padding-right: 20px;
+    padding-top: 20px;
+    height: 200px;
+}
+
+.left {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    height: 200px;
+    margin-left: 50px;
+    margin-bottom: 26px;
+}
+
+.indicators li:nth-child(2) p{
+    padding-left: 30px;
+    padding-top: 55px;
+    padding-right: 100px;
+    width: 600px;
+    height: 200px;
+    font-size: 26px;
+}
+
+.indicators li:nth-child(4) p{
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-right: 50px;
+    width: 600px;
+    height: 200px;
+    font-size: 26px;
+}
+
+
+/*Цвета (изначально для кружков*/ 
+
+.green {
+    background-color: var(--yellow_green);
+}
+
+.purple {
+    background-color: var(--ultra_violet);
+}
+
+.blue {
+    background-color: var(--egyptian_blue);
+}
+
+.cyan {
+    background-color: var(--eminence);
+}
+
+
+/*Блок "Возможности"*/ 
+
+.opportunities {
+    font-size: 35px;  
+    height: 1200px;
+    margin: auto;
+}
+
+.opportunities ul {
+    padding: 0 10% 0 10%;
+}
+
+.opportunities li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.opportunities div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 45%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--light_gray);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 400px; 
+}
+
+.opportunities div:nth-child(1) {
+    margin: 0 40px 0 0;
+}
+
+.opportunities div:nth-child(2) {
+    margin: 0 0 0 40px;
+}
+
+.opportunities li p:nth-child(1) {
+    width: 100%;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+.opportunities li p:nth-child(2) {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.opportunities li:nth-child(2) {
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+
+/*Таблица с тарифами*/ 
+
+.rate {
+    border-collapse: collapse;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    width: 65%;
+}
+
+.rate thead{
+    background-color: var(--gray);
+}
+
+.rate tbody{
+    background-color: var(--light_gray);        
+}
+
+.rate th{
+    width: 33%;
+    height: 80px;
+}
+
+.rate th:nth-child(1){
+    text-align: left;
+    padding-left: 45px;
+}
+
+.rate td{
+    border-top: var(--gray) solid 2px;
+    border-left: var(--gray) solid 2px;
+    width: 33%;
+    height: 120px;
+}
+
+.rate td:nth-child(1){
+    border-left: var(--gray) solid 0px;
+    width: 34%;
+    padding-left: 25px;
+}
+
+.rate td:nth-child(1){
+    text-align: left;
+}
+
+.rate_buttons {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.rate_buttons td{
+    height: 180px;
+}
+
+.rate_buttons div{
+    height: 100px;
+    width: 250px;
+
+    margin: auto;
+    background-color: var(--vivid_sky_blue);
+    border-radius: 8px;
+}
+
+.rate_buttons td:nth-child(2) div{
+    padding: 20px;
+}
+
+.rate_buttons td:nth-child(3) div{
+    padding: 32px 20px 20px 20px;
+}
+
+
+.rate_buttons a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.rate_buttons td:nth-child(2) a:hover div{
+    color: var(--light_gray);
+    background-color: var(--ultra_violet);
+}
+
+.rate_buttons td:nth-child(3) a:hover div{
+    color: var(--light_gray);
+    background-color: var(--egyptian_blue);
+}
+
+
+/*Блок с ответами на вопросы*/ 
+
+.faq {
+    display: block;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    font-weight: 500;
+}
+
+.question {
+    text-align: left;
+    margin: auto;
+    width: 90%; 
+}
+
+.question div{
+    background-color: var(--gray);
+    border-radius: 7px;
+    padding: 15px 15px 15px 15px;
+    width: 80%; 
+    max-width: 1000px; 
+    margin-bottom: 100px;
+}
+
+.support {
+    text-align: right;
+    margin: auto;
+    width: 90%; 
+}
+
+.support div{
+    background-color: var(--light_gray);
+    border-radius: 7px;
+    padding: 15px 15px 15px 150px;
+    width: 80%; 
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-bottom: 100px;
+}
+
+
+/*Форма регистрации*/ 
+
+/*Фон регистрации*/ 
+
+.main_registration{
+    background-image: url(../image/cuttingPlanet.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 100%;
+    margin-top: 20px;
+    height: 1500px;
+}
+
+/*Окно регистрации*/ 
+
+.form_container {
+    width: 40%;
+    height: 90%;
+    min-width: 500px;
+    margin: auto;    
+    background-color: var(--light_gray);
+    border-radius: 12px;
+}
+
+/*Меню регистрации*/ 
+
+.menu_registration{
+    border-bottom: 2px solid var(--eminence);
+    padding: 20px 0 5px 20px;
+}
+
+.menu_registration ul{
+    height: 80px;
+    margin-left: auto;
+}
+
+.menu_registration li:nth-child(1){
+    height: 80px;
+}
+
+.menu_registration li:nth-child(2){
+    margin-top: auto;
+}
+
+.menu_registration li:nth-child(3){
+    margin: auto;
+}
+
+.menu_registration h1{
+    font-weight: 600;
+    font-size: 50px;
+}
+
+/*Ячейки ввода*/ 
+
+.box_registration {
+    padding-top: 20px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.box_registration ul{
+    list-style: none;
+    width: 70%;
+    margin: auto ;
+}
+
+.box_registration li{
+    width: 100%;
+    height: 100px;
+}
+
+.box_registration li:nth-child(1){
+    text-align: center;
+    font-size: 22px;
+}
+
+.box_registration li:nth-child(2) label{
+    margin: 0 0 25px 10px;
+}
+
+.box_registration label{
+    display: flex;
+    margin: 30px 0 25px 10px;
+}
+
+.eye_icon {
+    position: relative;
+    bottom: 47px;
+    left: 90%;
+    cursor: pointer;
+}
+
+.input_box{
+    color: var(--dark_gray);
+    background-color: var(--gray);
+    border: 0px solid var(--slate_gray);
+    width: 100%;
+    padding: 20px 20px 20px 30px;
+    border-radius: 9px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*Дно блока регистрации*/ 
+
+.box_registration li:nth-child(9){
+    width: 100%;
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto 50px auto;
+}
+
+.registration a{
+    color: var(--black);
+    font-weight: 500;
+    font-size: 30px;
+    background-color: var(--vivid_sky_blue);
+    padding: 10px 30px 0 30px;
+    margin: 40px auto 0 auto;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.registration a:hover{
+    background-color: var(--eminence);
+}
+
+.back_to_site ul{
+    list-style: none;
+    width: 70%;
+    margin-left: 5%;
+}
+
+.back_to_site li{
+    width: 100%;
+    height: 100px;
+}
+
+.back_to_site a{
+    color: var(--black_gray);
+    font-weight: 400;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+
+.back_to_site a:hover{
+    text-decoration: underline;
+}
+
+
+/*Форма авторизации*/ 
+
+/*Фон авторизации*/ 
+
+.main_authorization{
+    background-image: url(../image/cuttingPlanet.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 100%;
+    margin-top: 20px;
+    height: 1200px;
+}
+
+/*Дно блока авторизации*/ 
+
+.box_authorization {
+    padding-top: 20px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.box_authorization ul{
+    list-style: none;
+    width: 70%;
+    margin: auto ;
+}
+
+.box_authorization li{
+    width: 100%;
+    height: 100px;
+}
+
+.box_authorization li:nth-child(1){
+    text-align: center;
+    font-size: 22px;
+}
+
+.box_authorization li:nth-child(2) label{
+    margin: 0 0 25px 10px;
+}
+
+.box_authorization label{
+    display: flex;
+    margin: 30px 0 25px 10px;
+}
+
+.box_authorization li:nth-child(3){
+    height: 30px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+.box_authorization li:nth-child(3) p{
+    color: var(--black_gray);
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.box_authorization li:nth-child(6){
+    height: 30px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+.box_authorization li:nth-child(6) a{
+    color: var(--black_gray);
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.box_authorization li:nth-child(7){
+    display: flex;
+    text-align: center;
+    margin: 0 auto 50px auto;
+}
+
+.box_authorization li:nth-child(8){
+    border-top: var(--dark_gray) 1px solid;
+    height: 70px;
+    padding-top: 10px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+.box_authorization li:nth-child(8) a{
+    color: var(--dark_gray);
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.authorization a{
+    color: var(--black);
+    font-weight: 500;
+    font-size: 30px;
+    background-color: var(--vivid_sky_blue);
+    padding: 10px 30px 0 30px;
+    margin: 40px auto 0 auto;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.authorization a:hover{
+    background-color: var(--yellow_green);
+}
+
+
+/*Станица с подтверджением регистрации**/ 
+
+/*Окно подтверджения регистрации*/ 
+
+.main_registration_proof{
+    background-image: url(../image/cuttingPlanet.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 100%;
+    margin-top: 20px;
+    height: 880px;
+}
+
+.form_container_proof {
+    width: 40%;
+    height: 700px;
+    min-width: 500px;
+    margin: auto;    
+    background-color: var(--light_gray);
+    border-radius: 12px;
+}
+
+/*Элементы меню*/ 
+
+.proof li{
+    height: 30px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+}
+
+.proof li:nth-child(3){
+    height: 30px;
+    margin: 250px auto 0 auto;
+    text-align: center;
+}
+
+.proof li:nth-child(1) p{
+    font-size: 35px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.proof li:nth-child(2) p{
+    font-size: 25px;
+    line-height: 1.6;
+    width: 420px;
+    margin: auto;
+}
+
+
+/*Станица с демо-версией*/ 
+
+.main_demo {
+    width: 80%;
+    height: 1000px;
+    margin: 50px auto 0;
+}
+
+.input_footer {
+    position: fixed;
+    margin: auto;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input_footer li:nth-child(1) a{
+    position: fixed;
+    margin: auto;
+    bottom: -30px;
+    left: -3%;
+    transform: translate(-50%, -50%);
+}
+
+.input_footer li:nth-child(2){
+    width: 1000px;
+}
+
+.input_footer li:nth-child(3) a{
+    position: fixed;
+    margin: auto;
+    bottom: -30px;
+    left: 103%;
+    transform: translate(-50%, -50%);
+}
+
+.input_bot{
+    color: var(--dark_gray);
+    background-color: var(--gray);
+    border: 0px solid var(--slate_gray);
+    width: 100%;
+    padding: 20px 20px 20px 30px;
+    border-radius: 9px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.demo_houston {
+        list-style: none;
+}
+
+/*Менюшка*/ 
+
+.settings{
+    list-style: none;
+}
+
+/*Сообщения*/ 
+
+.messages {
+    display: block;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+/*Дно главной страницы*/ 
+
+.contacts {
+    list-style: none;
+    text-align: center;
+    margin: 50px auto 0px;
+    padding: 20px;
+    background-color: var(--vivid_sky_blue);
+    color: var(--white);
+}
+
+.contacts ul{
+    list-style: none;
+}
+
+.contacts li:nth-child(1){
+    padding: 8px 15px 20px 15px;
+}
+
+.contacts li:nth-child(4){
+    padding: 10px 0 0 0;
+}
+
+.contacts li:nth-child(5){
+    padding: 0;    line-height: 1.0;
+}
+
+.contacts li{
+    padding: 6px;
+    font: bold;
+}
+
+.icone_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.icone_box svg{
+    margin: 0 20px 0 20px;
+}
