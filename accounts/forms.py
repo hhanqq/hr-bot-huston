@@ -1,5 +1,6 @@
 from django import forms
 from .models import CustomUser
+from django.contrib.auth.forms import AuthenticationForm
 
 class CustomUserCreationForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
@@ -16,3 +17,7 @@ class CustomUserCreationForm(forms.ModelForm):
 
         if password and confirm_password and password != confirm_password:
             raise forms.ValidationError("Пароли не совпадают")
+
+class CustomUserAuthenticationForm(AuthenticationForm):
+    email = forms.CharField(label="Email", widget=forms.TextInput(attrs={'class': 'form-control'}))
+    password = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={'class': 'form-control'}))

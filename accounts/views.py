@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm,CustomUserAuthenticationForm
 
 
 def register(request):
@@ -22,16 +22,17 @@ def register(request):
 
 def login_view(request):
     if request.method == 'POST':
-        email = request.POST['email']
-        password = request.POST['password']
-        user = authenticate(request, username=email, password=password)
+        form = CustomUserAuthenticationForm(data=request.POST)
 
-        if user is not None:
-            login(request, user)
-            return HttpResponseRedirect('/')
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
         else:
-            messages.error(request, "Неверное имя пользователя или пароль.")
-            return render(request, 'authorization.html')
+            form = CustomUserAuthenticationForm()
 
     return render(request, 'authorization.html')
 
