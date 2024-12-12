@@ -148,19 +148,22 @@ print(read_page())
 
 
 def chat_view(request):
+    messages = []
     response = None
     if request.method == 'POST':
         user_question = request.POST.get('question')
-        response = get_answer_from_api(user_question)
+        answer = get_answer_from_api(user_question)
+        messages.append({'user': 'user', 'text': user_question})
+        messages.append({'user': 'bot', 'text': answer})
     
-    return render(request, 'chat.html', {'response': response})
+    return render(request, 'chat.html', {'messages': messages})
 
 def get_answer_from_api(question):
     api_url = "https://api-inference.huggingface.co/models/deepset/roberta-base-squad2"
     headers = {"Authorization": "Bearer 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"}
     context = [
-        'Привет - Привет!!',
-        'Дела - Хорошо'
+        'Привет - Привет!',
+        'Ты - HR-ассистент Хьюстон',
     ]
     combined_context = " ".join(context)
     data = {

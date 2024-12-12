@@ -1,20 +1,68 @@
+<!-- chat.html -->
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Чат Бот</title>
+<title>Чат-бот</title>
+<style>
+    .user-message {
+        background-color: #e0f2ff;
+        border-left-color: #007bff;  /* Синий цвет для пользователя */
+    }
+    .bot-message {
+        background-color: #d0e0ff; /* Светло-голубой цвет для бота */
+        border-left-color: #213555;  /* Темно-синий цвет для бота */
+    }
+
+    #input-area {
+       margin-top: 10px;
+    }
+    #chatbox {
+        width: 500px;
+        height: 300px;
+        border: 1px solid #ccc;
+        overflow-y: scroll;
+        padding: 10px;
+        list-style: none; /* Убираем маркеры списка */
+        margin: 0;
+        padding: 0;
+    }
+    .message {
+      margin-bottom: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      list-style-type: none; /* Добавляем это для нулевых маркёров */
+      /* ... (ваш CSS для .message, .user-message, .bot-message) */
+    }
+</style>
 </head>
 <body>
-    <h1>Чат Бот</h1>
-    <form method="post">
+    <h1>Чат-бот</h1>
+    <ul id="chatbox">
+        <!-- Сообщения будут добавляться сюда -->
+        {% for message in messages %}
+            {% if message.user == 'bot' %}
+            <li class="message bot-message">
+                {{ message.text }}
+            </li>
+            {% else %}
+            <li class="message user-message">
+                {{ message.text }}
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <form method="POST">
         {% csrf_token %}
-        <label for="question">Введите ваш вопрос:</label>
-        <input type="text" id="question" name="question" required>
+        <input type="text" id="question" name="question" placeholder="Введите вопрос" required>
         <button type="submit">Отправить</button>
     </form>
-    {% if response %}
-        <h2>Ответ:</h2>
-        <p>{{ response }}</p>
-    {% endif %}
+
+    <script>
+        // Для автоматического скроллинга чата вниз
+        const chatbox = document.getElementById('chatbox');
+        chatbox.scrollTop = chatbox.scrollHeight;
+    </script>
 </body>
 </html>
